@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+a {
+  cursor: pointer;
+}
+.block {
+  position: relative;
+  margin: 10% auto 0;
+  width: 300px;
+  height: 600px;
+  background: black;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.block:before,
+.block:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    45deg,
+    red,
+    rgb(255, 94, 0),
+    rgb(255, 230, 0),
+    rgb(187, 255, 0),
+    rgb(34, 255, 0),
+    rgb(0, 255, 187),
+    rgb(0, 204, 255),
+    rgb(0, 26, 255),
+    rgb(111, 0, 255),
+    rgb(204, 0, 255),
+    rgb(255, 0, 230),
+    rgb(255, 0, 93),
+    rgb(255, 0, 68),
+    red,
+    rgb(255, 94, 0),
+    rgb(255, 230, 0),
+    rgb(187, 255, 0),
+    rgb(34, 255, 0),
+    rgb(0, 255, 187),
+    rgb(0, 204, 255),
+    rgb(0, 26, 255),
+    rgb(111, 0, 255),
+    rgb(204, 0, 255),
+    rgb(255, 0, 230),
+    rgb(255, 0, 93),
+    rgb(255, 0, 68)
+  );
+  background-size: 200%;
+  width: 300px;
+  height: 600px;
+  border-radius: 20px;
+  z-index: -1;
+  animation: anim 20s linear infinite;
+}
+
+@keyframes anim {
+  0% {
+    background-position: 300% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+
+.block:after {
+  filter: blur(30px);
+}
+.block img {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+svg {
+  /* stroke-dasharray: 10; */
+  animation: draw 5s infinite;
+}
+@keyframes draw {
+  0% {
+    stroke: red;
+  }
+  7% {
+    stroke: rgb(255, 94, 0);
+  }
+  14% {
+    stroke: rgb(255, 230, 0);
+  }
+  21% {
+    stroke: rgb(187, 255, 0);
+  }
+  35% {
+    stroke: rgb(34, 255, 0);
+  }
+  42% {
+    stroke: rgb(0, 255, 187);
+  }
+  49% {
+    stroke: rgb(0, 204, 255);
+  }
+  56% {
+    stroke: rgb(0, 26, 255);
+  }
+  63% {
+    stroke: rgb(111, 0, 255);
+  }
+  70% {
+    stroke: rgb(204, 0, 255);
+  }
+  77% {
+    stroke: rgb(255, 0, 230);
+  }
+  80% {
+    stroke: rgb(255, 0, 93);
+  }
+  100% {
+    stroke: rgb(255, 0, 68);
+  }
+}
+.mes__box {
+  width: 300px;
+  height: 200px;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.mes__box svg {
+  margin: 5px;
+}
