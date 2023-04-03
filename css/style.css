@@ -5,12 +5,13 @@ body {
 }
 a {
   cursor: pointer;
+  color: transparent;
 }
 .block {
   position: relative;
   margin: 5% auto 0;
   width: 300px;
-  height: 600px;
+  height: 800px;
   background: black;
   border-radius: 20px;
   box-sizing: border-box;
@@ -53,7 +54,7 @@ a {
   );
   background-size: 200%;
   width: 300px;
-  height: 600px;
+  height: 800px;
   border-radius: 20px;
   z-index: -1;
   animation: anim 20s linear infinite;
@@ -80,53 +81,66 @@ a {
 }
 svg {
   /* stroke-dasharray: 10; */
-  animation: draw 5s infinite;
+  animation: draw 20s infinite;
 }
 @keyframes draw {
   0% {
     stroke: red;
+    color: red;
   }
   7% {
     stroke: rgb(255, 94, 0);
+    color: rgb(255, 94, 0);
   }
   14% {
     stroke: rgb(255, 230, 0);
+    color: rgb(255, 230, 0);
   }
   21% {
     stroke: rgb(187, 255, 0);
+    color: rgb(187, 255, 0);
   }
   35% {
     stroke: rgb(34, 255, 0);
+    color: rgb(34, 255, 0);
   }
   42% {
     stroke: rgb(0, 255, 187);
+    color: rgb(0, 255, 187);
   }
   49% {
     stroke: rgb(0, 204, 255);
+    color: rgb(0, 204, 255);
   }
   56% {
     stroke: rgb(0, 26, 255);
+    color: rgb(0, 26, 255);
   }
   63% {
     stroke: rgb(111, 0, 255);
+    color: rgb(111, 0, 255);
   }
   70% {
     stroke: rgb(204, 0, 255);
+    color: rgb(204, 0, 255);
   }
   77% {
     stroke: rgb(255, 0, 230);
+    color: rgb(255, 0, 230);
   }
   80% {
     stroke: rgb(255, 0, 93);
+    color: rgb(255, 0, 93);
   }
   100% {
     stroke: rgb(255, 0, 68);
+    color: rgb(255, 0, 68);
   }
 }
 .mes__box {
   width: 300px;
   height: 200px;
-  margin-top: 0;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,4 +149,22 @@ svg {
 }
 .mes__box svg {
   margin: 5px;
+}
+.contact__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  height: 200px;
+}
+.contact__box > div {
+  display: flex;
+}
+.contact__box p {
+  animation: draw 20s infinite;
+}
+.contact__box img {
+  object-fit: contain;
+  margin-right: 10px;
 }
